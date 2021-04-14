@@ -78,11 +78,11 @@ console.log(
   "---------------------Retorno de valores--------------------------------------"
 );
 
-const saludar = (nombre) => {
-  console.log(`Hola ${nombre}!!!`);
-};
+// const saludar = (nombre) => {
+//   console.log(`Hola ${nombre}!!!`);
+// };
 
-saludar("Adrián");
+// saludar("Adrián");
 
 const sumar = (valor1, valor2) => {
   const rta = valor1 + valor2;
@@ -92,3 +92,44 @@ const sumar = (valor1, valor2) => {
 const resultado = sumar(4.4, 6.1);
 
 console.log(resultado);
+
+
+const obtenerNombreCompleto = (nombre, apellido) => {
+  const rta = `${nombre} ${apellido}`;
+  return rta;
+}
+
+const saludar = (nombre) => {
+  const rta = `Hola ${nombre}, un gusto en conocerte`;
+  return rta;
+}
+
+const gritar = (grito) => {
+  return `¡${grito}!`;
+}
+
+const saludarGritando1 = (nombre, apellido) => {
+
+  const nomApe = obtenerNombreCompleto(nombre, apellido);
+
+  const saludo = saludar(nomApe);
+
+  const grito = gritar(saludo);
+
+  return grito;
+
+}
+
+const saludarGritando2 = (nombre, apellido) => {
+
+  return gritar(saludar(obtenerNombreCompleto(nombre, apellido)));
+
+}
+
+const saludoGritando1 = saludarGritando1("Adrian", "Solimano");
+const saludoGritando2 = saludarGritando2("Matias", "Ada");
+
+console.log(saludoGritando1);
+console.log(saludoGritando2);
+
+// ¡Hola Ada Lovelace, un gusto conocerte!
