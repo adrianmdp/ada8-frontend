@@ -62,7 +62,8 @@ let contador = 1;
 
 while(edad >= contador) {
     console.log(contador);
-    contador = contador + 1;
+    // contador = contador + 1;
+    contador++;
 }
 
 const resultado = 12;
@@ -73,5 +74,34 @@ while(rta != resultado) {
 }
 
 
+const nombre = prompt("Ingrese su nombre");
+
+
 // For
+for(let i = 1; i < nombre.length; i++) {
+
+  console.log(nombre[i]);
+
+}
+
+const alumnos = ["Agostina", "Valentina", "Mailen", "Ludmila"];
+const alumnos2 = ["Federico", "Juan", "Santiago"];
+
+
+
+const enviarInvitacionesActoFinal = (listaAlumnos) => {
+
+  for(let i = 0; i < listaAlumnos.length; i++) {
+    console.log(`Enviar email a ${listaAlumnos[i]}`);
+  }
+
+}
+
+
+enviarInvitacionesActoFinal(alumnos);
+enviarInvitacionesActoFinal(alumnos2);
+
+
+
+//  i++   <=>   i = i + 1
 

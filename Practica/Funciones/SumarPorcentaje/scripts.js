@@ -18,3 +18,13 @@ const rta = sumarPorcentaje(10, 50);
 
 console.log(rta);
 
+
+
+const esMayor = (edad) => {
+
+    return (edad > 17); 
+
+}
+
+esMayor(12);
+esMayor(20);

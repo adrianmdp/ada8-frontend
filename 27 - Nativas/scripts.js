@@ -86,3 +86,69 @@ console.log("floor", redondeoAbajo);
 // random
 // devuelve un valor aleatorio
 console.log(Math.random());
+
+// Resolución ej 6 Funciones nativas.
+// 1
+const cambioTodasLasVocales1 = saludo.replaceAll(/[aeou]/g, "i");
+
+// 2
+const cambioTodasLasVocales2 = saludo.replaceAll("a", "i").replaceAll("e", "i").replaceAll("o", "i").replaceAll("u", "i");
+
+// 3
+let cambioTodasLasVocales3 = saludo.replaceAll("a", "i");
+cambioTodasLasVocales3 = saludo.replaceAll("e", "i");
+cambioTodasLasVocales3 = saludo.replaceAll("o", "i");
+cambioTodasLasVocales3 = saludo.replaceAll("u", "i");
+
+
+// Resolución ej 2 Funciones nativas
+const esElUltimoCaracter4 = (palabra, caracter) => {
+    return (palabra.slice(-1) === caracter);
+}
+
+const ej2_1 = esElUltimoCaracter4('lovelace', 'e');
+const ej2_2 = esElUltimoCaracter4('lovelace', 'f');
+
+console.log(ej2_1, ej2_2);
+
+
+function esElUltimoCaracter1 (palabra, caracter) {
+    return(palabra.includes(caracter, palabra.slice(-1)));
+} 
+
+const esElUltimoCaracter2 = (palabra, caracter) => { 
+    return (palabra.charAt(palabra.length-1) === caracter); 
+}
+
+function esElUltimoCaracter3 (palabra, caracter) {
+    return (palabra.lastIndexOf(caracter) === palabra.length-1 )
+} 
+
+
+// Uso de Split
+const obtenerPrimeraOracion = (texto) => {
+    const array = texto.split("/");
+    return array[5];
+};
+  
+const rta = obtenerPrimeraOracion("home/adrian/Documentos/ada8/27%20-%20Nativas/index.html");
+const rta2 = obtenerPrimeraOracion('Tengo varias oraciones. Esta es la segunda. Y esta es la tercera.')
+
+console.log(rta);
+
+
+
+
+function esFraccionMayorAUno(fraccion){
+    const datos = fraccion.split('/');
+    const dato1 = parseInt(datos[0]);
+    const dato2 = parseInt(datos[1]);
+    return (dato1 / dato2) > 1;
+} 
+
+console.log(esFraccionMayorAUno('1/2'));
+// false
+console.log(esFraccionMayorAUno('2/2'));
+// false
+console.log(esFraccionMayorAUno('4/2'));
+// true
