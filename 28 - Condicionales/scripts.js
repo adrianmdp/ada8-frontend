@@ -105,3 +105,47 @@ enviarInvitacionesActoFinal(alumnos2);
 
 //  i++   <=>   i = i + 1
 
+
+const nombre = "Sabirna";
+
+
+
+
+
+const esMayor = false;
+
+if(!esMayor) {
+  console.log('Es mayor de edad');
+}
+
+const hoy = 'sabado';
+
+if( "Adrian" === nombre && esMayor === false || hoy === 'sabado' ) {
+
+}
+
+"Adrian" === nombre && <div>soy un html</div>
+
+// Devuelven false
+false 
+null
+undefined
+0
+''
+NaN
+
+if("Adrián") { // Esto devuelve true
+}
+
+if(null) { // Esto devuelve false
+}
+
+// Operador NOT - Niega el resultado de la condición o el valor de un dato.
+if( !("Adrian" === nombre) ) {
+  console.log('Esto solo se muestra sin la condición da true');
+} else if(typeof nombre === 'boolean') {
+  console.log('Esto solo se va a mostrar si nombre fuera un booleano')
+} else {
+  console.log('Esto solo se muestra sin la condición da false');
+}
+
