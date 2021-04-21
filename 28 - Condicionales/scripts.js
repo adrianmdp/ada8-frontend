@@ -66,19 +66,18 @@ while(edad >= contador) {
     contador++;
 }
 
-const resultado = 12;
+const resultado = 20;
+const pregunta = "¿Cuanto es 12 + 8?";
 let rta;
 
 while(rta != resultado) {
-    rta = prompt("¿Cuanto es 4 + 8");
+  rta = prompt(pregunta);
 }
-
 
 const nombre = prompt("Ingrese su nombre");
 
-
 // For
-for(let i = 1; i < nombre.length; i++) {
+for(let i = 0; i < nombre.length; i++) {
 
   console.log(nombre[i]);
 

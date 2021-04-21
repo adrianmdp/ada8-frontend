@@ -1,0 +1,19 @@
+.cl-primary {
+    color: darkmagenta;
+}
+
+.bg-primary {
+    background-color: lightpink;
+}
+
+.new {
+    padding: 20px;
+}
+
+.title {
+    color: blue;
+}
+
+.new .title {
+    color: red;
+}
