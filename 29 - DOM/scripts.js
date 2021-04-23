@@ -32,9 +32,6 @@ const titles = document.querySelectorAll(".title");
 console.log(titles);
 
 
-/**
- * classList
- */
 
 /**
  * style
