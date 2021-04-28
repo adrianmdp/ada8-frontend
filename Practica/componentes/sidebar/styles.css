@@ -1,0 +1,55 @@
+.transition {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+}
+
+
+#navbar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #DDD;
+}
+#navbar ul {
+    margin-left: auto;
+}
+
+.list-unstyled {
+    list-style: none;
+}
+
+.sidebar {
+    background-color: darkorange;
+    color: white;
+    height: 100vh;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: -400px;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+
+.modal {
+    background-color: white;
+    width: 600px;
+    border: 1px solid #DDD;
+    position: absolute;
+    left: calc(50% - 300px);
+    top: -800px;
+}
+
+.modal.show {
+    top: 100px;
+}
+
+.modal .modal-body,
+.modal .modal-header,
+.modal .modal-footer {
+    padding: 20px;
+}

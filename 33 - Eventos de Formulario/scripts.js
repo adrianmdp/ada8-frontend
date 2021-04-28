@@ -45,3 +45,35 @@ miFormulario.addEventListener('submit', mostrarEnConsolaSubmit);
 
 // value
 // preventDefault
+
+
+const buttons = document.getElementsByClassName('btn-counter');
+const inputRespuesta = document.getElementById('resultado');
+
+const calculo = (event) => {
+
+    const button = event.target
+    const qty = button.getAttribute('data-qty');
+    const op = button.getAttribute('data-op');
+
+    if(op === '+') {
+
+        inputRespuesta.value = parseInt(inputRespuesta.value) + parseInt(qty);
+
+    } else if (op === '-') {
+
+        inputRespuesta.value = parseInt(inputRespuesta.value) - parseInt(qty);
+
+    } else {
+
+        inputRespuesta.value = parseInt(inputRespuesta.value) / parseInt(qty);
+
+    }
+
+}
+
+for(let i = 0; i < buttons.length; i++) {
+
+    buttons[i].addEventListener('click', calculo)
+
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <ul class="list-unstyled">
+            <li>
+                <button id="btn-toggle-sidebar" class="btn-toggle-sidebar">
+                    menú
+                </button>
+            </li>
+            <li>
+                <button id="btn-open-modal" class="btn-open-modal" data-toggle="modal-prueba1">
+                    Abrir modal
+                </button>
+            </li>
+            <li>
+                <button id="btn-open-modal" class="btn-open-modal" data-toggle="modal-prueba2">
+                    Abrir modal
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <aside id="sidebar" class="sidebar transition">
+        <ul  class="list-unstyled">
+            <li>
+                <a href="">Item 1</a>
+            </li>
+
+            <li>
+                <a href="">Item 2</a>
+            </li>
+
+            <li>
+                <a href="">Item 3</a>
+            </li>
+        </ul>
+    </aside>
+
+
+    <div id="modal-prueba1" class="modal transition">
+        <div class="modal-header">
+            <h3>Title</h3>
+        </div>
+        <div class="modal-body">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quae corrupti culpa qui reprehenderit fugiat voluptatem cumque! Ratione esse dolor atque totam mollitia, fuga consectetur! Impedit laborum dolorum laboriosam rem.
+        </div>
+        <div class="modal-footer">
+            <button>
+                Cerrar
+            </button>
+        </div>
+    </div>
+
+    <div id="modal-prueba2" class="modal transition">
+        <div class="modal-header">
+            <h3>Title 2</h3>
+        </div>
+        <div class="modal-body">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quae corrupti culpa qui reprehenderit fugiat voluptatem cumque! Ratione esse dolor atque totam mollitia, fuga consectetur! Impedit laborum dolorum laboriosam rem.
+        </div>
+        <div class="modal-footer">
+            <button>
+                Cerrar
+            </button>
+        </div>
+    </div>
+    
+    <script src="./scripts.js"></script>
+</body>
+</html>
