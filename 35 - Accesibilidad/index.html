@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+        aria-hidden
+    -->
+
+    <p aria-hidden="true">
+        Some things are better left unsaid.
+    </p>
+
+    <!---->
+
+    <p>
+        This is not hidden <span aria-hidden="true">but this is</span>!
+    </p>
+
+    <!---->
+
+
+
+    <!--
+        aria-label
+    -->
+
+    <button aria-label="Close" onclick="myDialog.close()">X</button>
+
+    <!---->
+
+
+
+    <!--
+        aria-labelledby
+    -->
+
+    <div id="myBillingId">Billing</div>
+
+    <div>
+        <div id="myNameId">Name</div>
+        <input type="text" aria-labelledby="myBillingId myNameId"/>
+    </div>
+    <div>
+        <div id="myAddressId">Address</div>
+        <input type="text" aria-labelledby="myBillingId myAddressId"/>
+    </div>
+
+    <!---->
+
+    <div role="main" aria-labelledby="foo">
+        <h1 id="foo">Wild fires spread across the San Diego Hills</h1>
+        Strong winds expand fires ignited by high temperatures ...
+    </div>
+
+    <!---->
+
+    <div id="radio_label">My radio label</div>
+    <ul role="radiogroup" aria-labelledby="radio_label">
+        <li role="radio">Item #1</li>
+        <li role="radio">Item #2</li>
+        <li role="radio">Item #3</li>
+    </ul>
+
+    <!---->
+
+    
+
+    <!--
+        aria-labelledby
+    -->
+
+    <div role="application" aria-labelledby="calendar" aria-describedby="info">
+        <h1 id="calendar">Calendar</h1>
+        <p id="info">
+            This calendar shows the game schedule for the Boston Red Sox.
+        </p>
+        <div role="grid">
+            ...
+        </div>
+    </div>
+
+    <!---->
+
+    <button aria-label="Close" aria-describedby="descriptionClose"
+        onclick="myDialog.close()">X</button>
+
+    ...
+
+    <div id="descriptionClose">Closing this window will discard any information entered and
+    return you back to the main page</div>
+
+
+</body>
+</html>
+
+

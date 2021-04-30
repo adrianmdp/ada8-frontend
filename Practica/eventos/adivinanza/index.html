@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      div{
+          display: flex;
+          justify-content: center;
+          grid-gap:10px;
+          margin: 20px 0px;
+      }
+      p{
+          display: flex;
+          justify-content: center;
+          margin:0
+      }
+      button{
+          border: transparent;
+          padding:  5px 10px;
+          border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h4>
+        En el cielo brinco y vuelo. Me encanta subir, flotar y lucir mi pelo.
+      </h4>
+        <p id="respuesta"></p>
+      <div>
+        <button class="btn" data-opcion="false">Ave</button>
+        <button class="btn" data-opcion="false">Mariposa</button>
+        <button class="btn" data-opcion="true">Cometa</button>
+      </div>
+      <button id="reset">Limpiar</button>
+    </section>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
