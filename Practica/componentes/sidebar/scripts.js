@@ -12,6 +12,24 @@ const toggleSidebar = () => {
 
 btnToggleSidebar.addEventListener('click', toggleSidebar);
 
+/**
+ * Sidebar Caso 2
+ */
+const sidebarOpen = () => {
+
+    sidebar.classList.add('show');
+
+}
+
+const sidebarClose = () => {
+
+    sidebar.classList.remove('show');
+
+}
+
+btnToggleSidebar.addEventListener('click', sidebarOpen);
+closeButtonSidebar.addEventListener('click', sidebarClose);
+
 
 /**
  * Modal

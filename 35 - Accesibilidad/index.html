@@ -13,13 +13,13 @@
     -->
 
     <p aria-hidden="true">
-        Some things are better left unsaid.
+        Es mejor dejar algunas cosas sin decir.
     </p>
 
     <!---->
 
     <p>
-        This is not hidden <span aria-hidden="true">but this is</span>!
+        Esto no es invisible <span aria-hidden="true">pero esto sí</span>!
     </p>
 
     <!---->
@@ -30,7 +30,7 @@
         aria-label
     -->
 
-    <button aria-label="Close" onclick="myDialog.close()">X</button>
+    <button aria-label="Close content">X</button>
 
     <!---->
 
@@ -40,14 +40,14 @@
         aria-labelledby
     -->
 
-    <div id="myBillingId">Billing</div>
+    <div id="myBillingId">Facturación</div>
 
     <div>
-        <div id="myNameId">Name</div>
+        <div id="myNameId">Nombre</div>
         <input type="text" aria-labelledby="myBillingId myNameId"/>
     </div>
     <div>
-        <div id="myAddressId">Address</div>
+        <div id="myAddressId">Dirección</div>
         <input type="text" aria-labelledby="myBillingId myAddressId"/>
     </div>
 
@@ -72,7 +72,7 @@
     
 
     <!--
-        aria-labelledby
+        aria-describedby
     -->
 
     <div role="application" aria-labelledby="calendar" aria-describedby="info">
