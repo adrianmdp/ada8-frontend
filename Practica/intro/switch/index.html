@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="calculadora" action="">
+      <div class="form-group">
+        <label for="operacion">Operación</label>
+        <select name="operacion" id="operacion" required>
+          <option value="" selected disabled>Seleccionar opción</option>
+          <option value="suma">SUMA</option>
+          <option value="resta">RESTA</option>
+          <option value="multiplicacion">MULTIPLICACIÓN</option>
+          <option value="division">DIVISIÓN</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="number2">Número 1</label>
+        <input type="number" name="num1" id="num1" value="4" required />
+      </div>
+
+      <div class="form-group">
+        <label for="number2">Número 2</label>
+        <input type="number" name="num2" required />
+      </div>
+
+      <button type="submit">Calcular</button>
+
+      <hr />
+      <div
+        id="rta"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          border: 1px solid #000;
+        "
+      ></div>
+    </form>
+
+    <script src="switch.js"></script>
+  </body>
+</html>
