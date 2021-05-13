@@ -9,19 +9,12 @@ saldos[28] = 909090909;
 saldos[0] = "Reemplacé el primer número";
 
 for (let i = 0; i < saldos.length; i++) {
-
   if (typeof saldos[i] == "object") {
-
     for (let j = 0; j < saldos[i].length; j++) {
-
-    //   console.log(saldos[i][j]);
-
+      //   console.log(saldos[i][j]);
     }
-
   } else {
-
     //   console.log(saldos[i]);
-      
   }
 }
 
@@ -31,10 +24,8 @@ saldos.push(user3);
 
 // saldos.unshift(5);
 
+const generarResumen = (saldo) => {};
 
-
-for(let saldo of saldos) {
-
-    console.log(saldo);
-
+for (let saldo of saldos) {
+  generarResumen(saldo);
 }
