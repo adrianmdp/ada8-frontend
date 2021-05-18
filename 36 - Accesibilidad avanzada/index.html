@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <label for="lastname">Apellido:</label>
+    <input type="text" name="lastname" id="lastname" />
+
+    <ul role="tree">
+        <li role="treeitem" tabindex="0" aria-expanded="true">
+            Item 1
+        </li>
+        <li role="treeitem" tabindex="0" aria-expanded="false">
+            Item 2
+        </li>
+        <li role="treeitem" tabindex="0" aria-expanded="false">
+            Item 3
+        </li>
+        <li role="treeitem" tabindex="0" aria-expanded="false">
+            Item 4
+        </li>
+    </ul>
+
+
+    <fieldset>
+
+        <legend>Número de teléfono</legend>
+
+        <input type="text" name="cod-area" title="Código de área" />
+        <input type="text" name="phone-number" title="Número de teléfono" />
+
+    </fieldset>
+
+    <img src="image.png" onclick="nextpage()" onkeypress="nextpage()" tabindex="0" alt="Navegar a la siguiente pagina.">
+
+
+    <form action="" id="signup" onsubmit="validate()"></form>
+    
+
+    <form action="" id="signup"></form>
+
+    <script>
+        document.getElementById('signup').addEventListener('click', validate);
+    </script>
+
+</body>
+</html>
