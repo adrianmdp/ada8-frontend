@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<label for="lastname">Apellido:</label>
+		<input type="text" name="lastname" id="lastname" />
 
-    <label for="lastname">Apellido:</label>
-    <input type="text" name="lastname" id="lastname" />
+		<ul role="tree">
+			<li role="treeitem" tabindex="0" aria-expanded="true">Item 1</li>
+			<li role="treeitem" tabindex="0" aria-expanded="false">Item 2</li>
+			<li role="treeitem" tabindex="0" aria-expanded="false">Item 3</li>
+			<li role="treeitem" tabindex="0" aria-expanded="false">Item 4</li>
+		</ul>
 
-    <ul role="tree">
-        <li role="treeitem" tabindex="0" aria-expanded="true">
-            Item 1
-        </li>
-        <li role="treeitem" tabindex="0" aria-expanded="false">
-            Item 2
-        </li>
-        <li role="treeitem" tabindex="0" aria-expanded="false">
-            Item 3
-        </li>
-        <li role="treeitem" tabindex="0" aria-expanded="false">
-            Item 4
-        </li>
-    </ul>
+		<fieldset>
+			<legend>Número de teléfono</legend>
 
+			<label for="nacionalidad">Ingresar Nacionalidad</label>
+			<select class="select2" name="" id="nacionalidad" title="">
+				<option value="">Argentina</option>
+				<option value="">Argentina</option>
+				<option value="">Argentina</option>
+				<option value="">Argentina</option>
+			</select>
 
-    <fieldset>
+			<input
+				type="text"
+				name="cod-area"
+				title="Código de área (223)"
+				placeholder="Código de área"
+			/>
+			<input
+				type="text"
+				name="phone-number"
+				title="Número de teléfono"
+				placeholder="Número de teléfono"
+			/>
+		</fieldset>
 
-        <legend>Número de teléfono</legend>
+		<!--<img
+			src="image.png"
+			onclick="nextpage()"
+			onkeypress="nextpage()"
+			tabindex="0"
+			alt="Navegar a la siguiente pagina."
+		/>
 
-        <input type="text" name="cod-area" title="Código de área" />
-        <input type="text" name="phone-number" title="Número de teléfono" />
+		<form action="" id="signup" onsubmit="validate()"></form> -->
 
-    </fieldset>
+		<form action="" id="signup"></form>
 
-    <img src="image.png" onclick="nextpage()" onkeypress="nextpage()" tabindex="0" alt="Navegar a la siguiente pagina.">
+		<script>
+			// document
+			// 	.getElementById("signup")
+			// 	.addEventListener("click", validate);
+		</script>
 
-
-    <form action="" id="signup" onsubmit="validate()"></form>
-    
-
-    <form action="" id="signup"></form>
-
-    <script>
-        document.getElementById('signup').addEventListener('click', validate);
-    </script>
-
-</body>
+		<script src="scripts.js"></script>
+	</body>
 </html>
