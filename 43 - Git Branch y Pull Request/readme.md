@@ -1,6 +1,6 @@
 1 - Lo primero es definir la tarea y crear una branch con un nombre claro que ayude a entender lo que resuelve y a identificarla con facilidad.
 
-![](../images/unknown.png)
+![](https://github.com/adrianmdp/ada8-frontend/blob/main/43%20-%20Git%20Branch%20y%20Pull%20Request/images/unknown.png?raw=true)
 2 - Al hacer el checkout -b creamos la branch y nos posicionamos en ella. Ahora, en esta nueva branch, ya podemos realizar todos los cambios que requiere la tarea. En la siguiente imagen, al hacer git status podemos ver que tenemos una modificación en un rachivo existente y uno que aún no tiene seguimiento xq no existe en nuestro repositorio, osea que se trata de un nuevo archivo.
 
 3 - En este paso vamos a stagear los cambios con el comando git add. Podemos hacerlo archivo por archivo escribiendo git add /ruta/al/archivo/nombre.ext. O masivamente con git add . (atención al punto del final). Al hacer git status, ahora vemos los archivos con color verde, listos para crear el commit.
