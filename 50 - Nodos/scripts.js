@@ -154,13 +154,16 @@
 const form = document.createElement("form");
 const input = document.createElement("input");
 const button = document.createElement("button");
+const textButton = document.createTextNode("Agregar");
 form.appendChild(input);
 form.appendChild(button);
 input.setAttribute("name", "tarea");
+input.setAttribute("type", "text");
 button.setAttribute("type", "submit");
+button.appendChild(textButton);
 
 const ul = document.createElement("ul");
-const tasks = [];
+const tasks = ["Ir al gym"];
 
 const agregarTarea = (e) => {
 	e.preventDefault();
@@ -190,11 +193,6 @@ const actualizarLista = () => {
 
 form.addEventListener("submit", agregarTarea);
 
-// Prueba es igual a esto
-// <li>
-//    Prueba
-// </li>
-const textButton = document.createTextNode("Agregar");
 button.appendChild(textButton);
 document.body.appendChild(form);
 document.body.appendChild(ul);
