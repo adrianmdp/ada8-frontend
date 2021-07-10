@@ -1,0 +1,27 @@
+{
+    "libros" : [
+        {
+            "name" : "Adrián",
+            "lastname" : "Solimano",
+            "email" : "adrian@gmail.com"
+        },
+        {
+            "name" : "Adrián",
+            "lastname" : "Solimano",
+            "email" : "adrian@gmail.com"
+        },
+        {
+            "name" : "Adrián",
+            "lastname" : "Solimano",
+            "email" : "adrian@gmail.com"
+        }
+    ],
+    "pagina" : 1,
+    "total" : 500,
+    "exito" : true
+},
+
+{
+    "exito" : false,
+    "mensaje" : "La pagina solicitada no existe"
+}
