@@ -54,3 +54,4 @@ var mostrarDatoMascota = function (m) {
     }
 };
 mostrarDatoMascota(mascota2);
+
