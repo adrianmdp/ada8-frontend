@@ -223,6 +223,8 @@ console.log(nominaEmpleado2);
 
 
 // Pasaje por valor vs pasaje por referencia
+
+
 // Shallow copy vs deep copy
 
 let var1 = 34;
@@ -250,6 +252,7 @@ const { ...inhabitantTest2 } = inhabitant;
 inhabitantTest2.age = 9999999999;
 
 console.log(inhabitantTest2, inhabitant);
+
 
 // {
 //    id: 0,
