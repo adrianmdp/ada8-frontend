@@ -201,6 +201,9 @@ const res2 = array.reduce((prev, curr, i, arr) => {
 console.log(res2);
 
 
+
+
+
 // console.log(res)
 
 // console.log('-------------------------------------------');

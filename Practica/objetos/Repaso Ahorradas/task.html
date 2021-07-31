@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Crear nueva tarea</h1>
+   <form action="">
+      <div>
+         <label for="">Título</label>
+         <input type="text" name="title" id="title" />
+      </div>
+
+      <div>
+         <label for="">Fecha de inicio</label>
+         <input type="date" name="date_start" id="date_start" />
+      </div>
+
+      <div>
+         <label for="">Fecha de fin</label>
+         <input type="date" name="date_end" id="date_end" />
+      </div>
+
+      <div>
+         <label for="">Categoría</label>
+         <select name="categories" id="categories">
+            <option value="todas" selected>Todas</option>
+         </select>
+      </div>
+
+      <div>
+         <label for="">Usuario</label>
+         <select name="users" id="users"></select>
+      </div>
+
+      <div>
+         <label for="">Descripción</label>
+         <textarea name="description" id="description" id="description"></textarea>
+      </div>
+
+      <button type="submit">Crear tarea</button>
+  </form>
+
+  <script src="./assets/js/scripts.js"></script>
+  <script src="./assets/js/tasks.js"></script>
+</body>
+</html>
