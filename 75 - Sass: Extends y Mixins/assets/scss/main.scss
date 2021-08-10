@@ -1,0 +1,70 @@
+// Extendiendo y heredando estilos
+// Extends
+.btn {
+	border: 0;
+	background-color: transparent;
+}
+
+.btn--primary {
+	@extend .btn;
+	background-color: aquamarine;
+	color: darkgreen;
+}
+
+// @mixin y @include
+// Sintaxis
+
+@mixin t-ease($ms: 300ms) {
+	-webkit-transition: all $ms ease;
+	-moz-transition: all $ms ease;
+	-ms-transition: all $ms ease;
+	-o-transition: all $ms ease;
+	transition: all $ms ease;
+}
+
+.nav {
+	@include t-ease();
+}
+
+// Parámetros y parámetros por default en mixins
+
+// Interpolación
+// Sintaxis
+@mixin corner-icon($param1, $param2, $param3) {
+	.icon-#{$param1} {
+		#{$param2}: $param3;
+	}
+}
+
+@mixin button(
+	$param1,
+	$param2,
+	$param3: "white",
+	$param4: 0,
+	$param5: 0,
+	$param6: "white"
+) {
+	.btn-#{$param1} {
+		background-color: $param2;
+		color: $param3;
+		border-radius: $param4;
+		border-width: $param5;
+
+		&:hover {
+			@include t-ease(400ms);
+			background-color: $param6;
+		}
+	}
+}
+
+@include button("primary", "blue", "white", 4, 1, "red");
+@include button("secondary", "black", "white", 4, 1, "red");
+@include button("info", "#EEE", "#333", 4, 1, "red");
+@include button("danger", "red", "white", 4, 2, "red");
+@include button("success", "green", "white", 3, 2, "red");
+@include button("warning", "yellow", "black", 3, 2, "red");
+
+@include corner-icon("login", "color", "blue");
+@include corner-icon("logout", "color", "red");
+
+// Diferencias principales y cuándo usar cada uno

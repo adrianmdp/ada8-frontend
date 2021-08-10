@@ -1,0 +1,31 @@
+// Preprocesadores
+	// Perpros
+
+
+// Instalando y ejecutando Sass
+	// npm i -g node-sass    -> para instalar
+	// node-sass -w scss -o css    -> para compilar
+
+
+// Variables
+$primary-color: #222;
+$margin-small: 10px;
+$margin: 20px;
+$margin-large: 30px;
+
+
+// Creando e importando módulos
+@import "./components/main";
+@import "./pages/main";
+@import "./layout/main";
+
+
+// Estructura de archivos
+
+// Separando responsabilidades
+
+// Patrón 7-1
+	// https://sass-guidelin.es/es/#el-patron-7-1
+
+
+// Operadores

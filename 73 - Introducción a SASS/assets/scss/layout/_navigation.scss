@@ -1,0 +1,16 @@
+// Anidado
+.nav {
+	background-color: $primary-color;
+
+	ul {
+		color: red;
+
+		li {
+			color: green;
+
+			a {
+				color: blue;
+			}
+		}
+	}
+}

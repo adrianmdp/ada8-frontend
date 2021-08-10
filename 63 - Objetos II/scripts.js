@@ -36,21 +36,21 @@ console.log(objetResponse2);
 /* Local storage */
 
 // SET
-localStorage.setItem('fb-session-token', "klsañjñlkjviodafjlkñaksjdlkvmñlsdilaidslf");
+localStorage.setItem(
+	"fb-session-token",
+	"klsañjñlkjviodafjlkñaksjdlkvmñlsdilaidslf"
+);
 
 // GET
-const token = localStorage.getItem('fb-session-token');
+const token = localStorage.getItem("fb-session-token");
 
-const elem = document.createElement('div');
+const elem = document.createElement("div");
 
 elem.innerText = token;
 
 document.body.appendChild(elem);
 
-
 const fecha = new Date(1983, 3, 13);
 const fecha2 = new Date();
 
 console.log(fecha2.getTime() - fecha.getTime());
-
-

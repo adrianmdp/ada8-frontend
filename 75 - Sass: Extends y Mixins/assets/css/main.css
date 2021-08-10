@@ -1,0 +1,98 @@
+.btn, .btn--primary {
+  border: 0;
+  background-color: transparent; }
+
+.btn--primary {
+  background-color: aquamarine;
+  color: darkgreen; }
+
+.nav {
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease; }
+
+.btn-primary {
+  background-color: "blue";
+  color: "white";
+  border-radius: 4;
+  border-width: 1; }
+  .btn-primary:hover {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    background-color: "red"; }
+
+.btn-secondary {
+  background-color: "black";
+  color: "white";
+  border-radius: 4;
+  border-width: 1; }
+  .btn-secondary:hover {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    background-color: "red"; }
+
+.btn-info {
+  background-color: "#EEE";
+  color: "#333";
+  border-radius: 4;
+  border-width: 1; }
+  .btn-info:hover {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    background-color: "red"; }
+
+.btn-danger {
+  background-color: "red";
+  color: "white";
+  border-radius: 4;
+  border-width: 2; }
+  .btn-danger:hover {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    background-color: "red"; }
+
+.btn-success {
+  background-color: "green";
+  color: "white";
+  border-radius: 3;
+  border-width: 2; }
+  .btn-success:hover {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    background-color: "red"; }
+
+.btn-warning {
+  background-color: "yellow";
+  color: "black";
+  border-radius: 3;
+  border-width: 2; }
+  .btn-warning:hover {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    background-color: "red"; }
+
+.icon-login {
+  color: "blue"; }
+
+.icon-logout {
+  color: "red"; }

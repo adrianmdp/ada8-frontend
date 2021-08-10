@@ -1,0 +1,40 @@
+// No hagas esto...
+.modal header {
+
+}
+
+// se hace así sin sass...
+
+.modal { /* Selector del bloque o componente */
+   max-width: 600px;
+}
+
+@media(max-width: 448px) {
+   .modal {
+      max-width: 90%;
+   }
+}
+
+.modal__header {
+
+}
+
+.modal__body {
+
+}
+
+.modal__footer {
+
+}
+
+.modal__image {
+
+}
+
+.modal__paragraph {
+
+}
+
+.modal__list {
+
+}
