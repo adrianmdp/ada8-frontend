@@ -1,0 +1,89 @@
+Peticiones REST erroneas.
+
+http://miapi.com/get-users -> obtener
+http://miapi.com/add-users -> crear
+http://miapi.com/update-users -> actualizar
+http://miapi.com/delete-users - eliminar
+
+
+Peticiones REST correctas
+
+http://miapi.com/users -> para todos los casos anteriores.
+
+Y resolvemos el método de petición con verbos HTTP (GET, POST, PUT, PATCH o DELETE);
+
+
+path params
+
+http://miapi.com/users/50 -> GET -> path param
+http://miapi.com/users/50 -> POST -> path param -> ¡NO!
+http://miapi.com/users/50 -> PUT -> path param
+http://miapi.com/users/50 -> PATCH -> path param
+http://miapi.com/users/50 -> DELETE -> path param
+
+http://miapi.com/users/30/vehicles/10 -> GET -> path param
+
+
+
+query params
+
+http://miapi.com/users?id=50 -> GET -> query param
+
+http://miapi.com/users?typeid=10&type=vehicles&userid=30 -> GET -> path param
+
+
+
+desde http://misitioweb.com hago la request http://miapi.com/users
+
+
+Operaciones síncronas vs asíncronas
+
+1º - sentencia A
+2º - sentencia B
+3º - sentencia C
+
+4º - petición a la api
+      7º - entonces en caso de éxito
+         8º -- pasa algo
+      7º - error
+         8º -- muentro mensaje de error
+
+5º - sentencia D
+6º - sentencia E
+
+
+
+fech, then y catch
+
+sentencia A
+sentencia B
+sentencia C
+
+fetch (hago una)-> petición a la api
+      then (obtengo un status success) -> entonces en caso de éxito
+         pasa algo
+      catch (obtengo un status error) -> error
+         muentro mensaje de error
+
+sentencia D
+sentencia E
+
+----------------------------------------------
+
+sentencia A
+sentencia B
+sentencia C
+
+fetch('https://api.github.com/en.javascript.info/commits/34')
+  .then(respuesta => {
+     return respuesta.json()
+  })
+  .then(commits => {
+     alert(commits[0].author.login)
+  })
+  .catch(err => {
+     setState(error, err.getMessage())
+  });
+
+sentencia D
+sentencia E
