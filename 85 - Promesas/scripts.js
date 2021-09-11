@@ -59,3 +59,33 @@ imprimir()
 // Acá va el imprimir!!!
 
 // Este mje depende de la resolución de la promesa.
+
+// Repaso en la clase 86
+
+const operacion = false; // no tenemos control sobre este resultado
+
+const getComics = () => {
+	return new Promise((resolve, reject) => {
+		if (operacion) {
+			// success
+			resolve({
+				success: true,
+			});
+		} else {
+			// error
+			reject({
+				success: false,
+			});
+		}
+	});
+};
+
+const miPromesa = getComics();
+
+miPromesa
+	.then((response) => {
+		console.log(response);
+	})
+	.catch((err) => {
+		console.log(err);
+	});
