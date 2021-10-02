@@ -23,4 +23,14 @@
 
 ### Tareas
 
-> 1 Las tareas tienen título, descripción, estado, fecha de creacion, fecha inicio, fecha fin y usuario.
+> 1 Crear un formulario para dar de alta las tareas. Estas tienen título, descripción, estado, fecha de creacion, fecha inicio, fecha fin y usuario. Puede ser una nueva pantalla (en la carpeta page).
+
+
+
+### Firebase 
+
+> 1 Crear una nueva app en la consola para todoapp
+
+> 2 Crear una "Realtime Database"
+
+> 3 Integar firebase a la app.
