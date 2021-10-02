@@ -1,6 +1,8 @@
 import { Dispatch, FC } from "react"
 import { Page } from '../../App'
 
+import './styles.scss'
+
 type Props = {
     page: string
 	 onChangePage: Dispatch<Page>
@@ -9,7 +11,7 @@ type Props = {
 const Nav: FC<Props> = ({ page, onChangePage }) => {
 
     return (
-        <nav>
+        <nav className="nav-primary">
             Estas en: { page }
             <ul>
                 <li>
