@@ -1,5 +1,7 @@
 import { useState } from "react"
 
+let a = 30;
+
 const Services = () => {
 
     const [value, setValue] = useState("Adrian")
@@ -9,6 +11,7 @@ const Services = () => {
     const handleClick = () => {
         setValue("Mati")
         height = 20;
+        a = 40
     }
 
 
