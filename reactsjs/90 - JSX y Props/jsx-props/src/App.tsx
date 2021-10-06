@@ -25,7 +25,7 @@ const App = () => {
 
       {inhabitants.map((inhabitant) => (
         <Inhabitant
-          inhabitant={inhabitant}
+          inhabitant={inhabitant} 
           // id={inhabitant.id}
           // name={inhabitant.name}
           // thumbnail={inhabitant.thumbnail}
