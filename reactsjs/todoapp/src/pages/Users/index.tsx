@@ -3,7 +3,7 @@ import { getUsers } from "../../api";
 import { User } from "../../types";
 
 const Users = () => {
-  const [users, setUsers] = useState<User[] | undefined>([]);
+  const [users, setUsers] = useState<User[] | undefined>();
 
   const obtenerUsuarios = async () => {
     const response = await getUsers();
@@ -13,8 +13,6 @@ const Users = () => {
   if (!users) {
     obtenerUsuarios();
   }
-
-  console.log(users);
 
   return (
     <div>

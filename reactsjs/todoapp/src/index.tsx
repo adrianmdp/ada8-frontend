@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { Users } from "./pages";
+import { SignUp, Users } from "./pages";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Users />
+    <SignUp />
   </React.StrictMode>,
   document.getElementById("root")
 );
