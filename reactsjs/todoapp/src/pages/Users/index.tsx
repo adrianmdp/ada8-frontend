@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getUsers } from "../../api";
+import { Layout } from "../../components";
 import { User } from "../../types";
 
 const Users = () => {
@@ -15,7 +16,7 @@ const Users = () => {
   }
 
   return (
-    <div>
+    <Layout>
       <table>
         <thead>
           <tr>
@@ -38,7 +39,7 @@ const Users = () => {
           })}
         </tbody>
       </table>
-    </div>
+    </Layout>
   );
 };
 

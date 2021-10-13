@@ -1,4 +1,5 @@
 import { FC, FormEvent, useState } from "react";
+import { Layout } from "../../components";
 import { signup } from "./api";
 
 const SignUp: FC = () => {
@@ -14,7 +15,7 @@ const SignUp: FC = () => {
   };
 
   return (
-    <div>
+    <Layout>
       <form action="" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email</label>
@@ -71,7 +72,7 @@ const SignUp: FC = () => {
 
         <button type="submit">Guardar</button>
       </form>
-    </div>
+    </Layout>
   );
 };
 
