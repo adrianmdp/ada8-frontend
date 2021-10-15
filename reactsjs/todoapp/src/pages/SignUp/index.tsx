@@ -15,7 +15,7 @@ const SignUp: FC = () => {
   };
 
   return (
-    <Layout>
+    <Layout mainClass="sign-up">
       <form action="" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email</label>

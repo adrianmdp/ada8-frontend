@@ -2,8 +2,13 @@ import { Layout } from "../../components";
 
 const Login = () => {
   return (
-    <Layout hideHeader>
-      <>Este es el login</>
+    <Layout mainClass="login" hideHeader>
+      <form action="">
+        <div>
+          <label htmlFor=""></label>
+          <input type="text" />
+        </div>
+      </form>
     </Layout>
   );
 };

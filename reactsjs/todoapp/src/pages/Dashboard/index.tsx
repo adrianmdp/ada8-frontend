@@ -4,10 +4,11 @@ import { Layout } from "../../components";
 
 const Dashboard: FC = () => {
   return (
-    <Layout>
-      <Link to="/users">Usuarios</Link>
-      Este es el contenido de Dashboard
-    </Layout>
+    <>
+      <Layout mainClass="dashboard">Este es el contenido de Dashboard</Layout>
+      {/* <Link to="/users">Usuarios</Link> */}
+      {/* </Layout> */}
+    </>
   );
 };
 

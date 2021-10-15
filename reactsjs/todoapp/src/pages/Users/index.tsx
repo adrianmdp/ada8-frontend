@@ -16,8 +16,8 @@ const Users = () => {
   }
 
   return (
-    <Layout>
-      <table>
+    <Layout mainClass="users">
+      <table className="table">
         <thead>
           <tr>
             <th>ID</th>

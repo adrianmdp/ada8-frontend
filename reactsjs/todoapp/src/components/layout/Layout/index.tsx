@@ -4,18 +4,17 @@ import { Header } from "../Header";
 import { Main } from "../Main";
 
 type Props = {
-  id?: string;
   hideHeader?: boolean;
+  hideFooter?: boolean;
+  mainClass?: string;
 };
 
-const Layout: FC<Props> = ({ children, hideHeader }) => {
+const Layout: FC<Props> = ({ children, hideHeader, hideFooter, mainClass }) => {
   return (
     <>
       {!hideHeader && <Header />}
-
-      <Main>{children}</Main>
-
-      <Footer />
+      <Main className={mainClass}>{children}</Main>
+      {!hideFooter && <Footer />}
     </>
   );
 };
