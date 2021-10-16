@@ -1,6 +1,5 @@
 ## TODO APP
 
-
 > 1 Crear una app con create-react-app (opcional typescript)
 
 > 2 Limpiar el proyecto
@@ -25,12 +24,12 @@
 
 > 1 Crear un formulario para dar de alta las tareas. Estas tienen título, descripción, estado, fecha de creacion, fecha inicio, fecha fin y usuario. Puede ser una nueva pantalla (en la carpeta page).
 
-
-
-### Firebase 
+### Firebase
 
 > 1 Crear una nueva app en la consola para todoapp
 
 > 2 Crear una "Realtime Database"
 
 > 3 Integar firebase a la app.
+
+### Autenticación

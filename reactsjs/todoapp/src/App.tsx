@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Dashboard, SignUp, Tasks, Users } from "./pages";
-import { Login } from "./pages/Login";
+import { Dashboard, SignUp, Tasks, Users, Login } from "./pages";
 
 const App = () => {
   return (
@@ -8,8 +7,11 @@ const App = () => {
       <Switch>
         <Route path="/login" component={Login} />
         <Route path="/sign-up" component={SignUp} />
-        <Route path="/tasks" component={Tasks} />
+        <Route path="/recovery-password" component={SignUp} />
+
         <Route path="/users" component={Users} />
+        <Route path="/profile" component={Users} />
+        <Route path="/tasks/edit" component={Tasks} />
         <Route path="/" component={Dashboard} />
       </Switch>
     </Router>

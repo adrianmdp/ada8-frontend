@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../../components";
+import { WithAuth } from "../../hoc";
+import { useAuth } from "../../hooks";
 
 const Dashboard: FC = () => {
   return (
@@ -12,4 +14,4 @@ const Dashboard: FC = () => {
   );
 };
 
-export { Dashboard };
+export const DashboardPage = WithAuth(Dashboard);

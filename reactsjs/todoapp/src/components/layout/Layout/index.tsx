@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useAuth } from "../../../hooks";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 import { Main } from "../Main";
