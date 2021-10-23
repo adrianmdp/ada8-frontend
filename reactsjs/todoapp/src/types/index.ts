@@ -3,6 +3,7 @@ export type User = {
   name: string;
   email: string;
   pass: string | null;
+  address: string;
 };
 
 export type Task = {};

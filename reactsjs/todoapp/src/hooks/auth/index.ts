@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { getUsers } from "../../api";
 import { User } from "../../types";
 
