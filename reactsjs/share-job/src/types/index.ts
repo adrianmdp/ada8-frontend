@@ -6,6 +6,16 @@ export type User = {
   password: string;
 };
 
+export type JobOffer = {
+  id: string;
+  title: string;
+  description: string;
+  company: string;
+  city: string;
+  date: string;
+  mod: string;
+};
+
 // export type UserProfile = User & { image: string };
 
 // const a: UserProfile = {

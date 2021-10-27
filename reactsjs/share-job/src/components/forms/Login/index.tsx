@@ -9,7 +9,7 @@ const defaultValues = {
 
 const Login = () => {
   const [inputs, setInputs] = useState(defaultValues);
-  const [alert, setAlert] = useState<string | unknown>();
+  const [alert] = useState<string | unknown>();
 
   const { push } = useHistory();
 
@@ -21,7 +21,7 @@ const Login = () => {
       localStorage.setItem("user", JSON.stringify(response));
       push("/");
     } catch (e) {
-      setAlert(e.message);
+      // setAlert(e.message);
     }
   };
 

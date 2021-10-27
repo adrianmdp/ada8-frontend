@@ -1,6 +1,13 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Categories, JobOffers, Login, Profile, SignUp, Users } from "./page";
+import {
+  Categories,
+  JobOffers,
+  Login,
+  Profile,
+  SignUp,
+  Users,
+  AddJobOffer,
+} from "./page";
 
 const App = () => {
   return (
@@ -11,6 +18,7 @@ const App = () => {
         <Route path="/categories" component={Categories} />
         <Route path="/profile" component={Profile} />
         <Route path="/users" component={Users} />
+        <Route path="/add-job-offer" component={AddJobOffer} />
         <Route path="/" component={JobOffers} />
       </Switch>
     </Router>

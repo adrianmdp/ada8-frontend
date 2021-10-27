@@ -10,6 +10,7 @@ type Payload = {
 const login = async (payload: Payload) => {
   try {
     const response = await api.get("/users.json");
+
     /* Tarea de backend */
     const users: User[] = mapToArray(response.data);
 
@@ -25,7 +26,7 @@ const login = async (payload: Payload) => {
     }
     /* / Tarea de backend */
   } catch (e) {
-    throw new Error(e.message);
+    console.log(e);
   }
 };
 

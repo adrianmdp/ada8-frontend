@@ -1,3 +1,4 @@
+export { AddJobOffer } from "./AddJobOffer";
 export { Categories } from "./Categories";
 export { JobOffers } from "./JobOffers";
 export { Login } from "./Login";
