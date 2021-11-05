@@ -1,4 +1,4 @@
-import { EventHandler, FC, FormEvent, useEffect, useState } from "react";
+import { FC, FormEvent, useState } from "react";
 import { Layout } from "../../components";
 import { WithAuth } from "../../hoc";
 import { useAuth } from "../../hooks";

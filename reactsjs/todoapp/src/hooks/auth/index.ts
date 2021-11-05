@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { getUsers } from "../../api";
 import { User } from "../../types";
 
@@ -24,11 +24,11 @@ const useAuth = () => {
     }
   };
 
-  const logout = () => {};
+  // const logout = () => {};
 
-  const recoveryPassword = () => {};
+  // const recoveryPassword = () => {};
 
-  return { login, userSession };
+  return { login, userSession, setUserSession };
 };
 
 export { useAuth };

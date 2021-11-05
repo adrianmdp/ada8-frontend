@@ -11,7 +11,7 @@ const App = () => {
 
         <Route path="/users" component={Users} />
         <Route path="/profile" component={Users} />
-        <Route path="/tasks/edit" component={Tasks} />
+        <Route path="/tasks" component={Tasks} />
         <Route path="/" component={Dashboard} />
       </Switch>
     </Router>

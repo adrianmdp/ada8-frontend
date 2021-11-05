@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FC, FormEvent, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { login } from "./api";
 
@@ -7,7 +7,12 @@ const defaultValues = {
   password: "",
 };
 
-const Login = () => {
+type Props = {
+  id?: string;
+  className?: string;
+};
+
+const Login: FC<Props> = ({ id, className }) => {
   const [inputs, setInputs] = useState(defaultValues);
   const [alert] = useState<string | unknown>();
 
@@ -26,7 +31,7 @@ const Login = () => {
   };
 
   return (
-    <form action="" onSubmit={handleSubmit}>
+    <form id={id} className={className} action="" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="">Email</label>
         <input

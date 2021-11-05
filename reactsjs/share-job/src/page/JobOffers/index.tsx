@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { JobOffer } from "../../types";
 import { getJobOffers } from "./api";
+import { Card } from "../../components/common";
 
-const JobOffers = () => {
+const JobOffers: FC = () => {
   const [offers, setOffers] = useState<JobOffer[]>();
 
   useEffect(() => {
@@ -13,16 +14,13 @@ const JobOffers = () => {
 
   return (
     <>
-      <h1>Ofertas de trabajo</h1>
+      <h1 className="title">Ofertas de trabajo</h1>
 
-      <ul>
+      <div className="cards-wrapper">
         {offers?.map((offer) => (
-          <li>
-            <a href="/asd">{offer.title}</a>
-            <p>{offer.description}</p>
-          </li>
+          <Card title={offer.title}>{offer.description}</Card>
         ))}
-      </ul>
+      </div>
     </>
   );
 };

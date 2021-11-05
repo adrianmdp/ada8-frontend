@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://todoapp-c3a11-default-rtdb.firebaseio.com",
+  baseURL: process.env.REACT_APP_DB_FIREBASE,
   params: {
     ejemplo: "valor-ejemplo",
   },

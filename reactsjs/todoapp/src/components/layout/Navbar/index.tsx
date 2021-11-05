@@ -7,7 +7,7 @@ const Navbar = () => {
       <ul>
         {menuItems.map((item) => {
           return (
-            <li>
+            <li key={item.label}>
               <Link to={item.href}>{item.label}</Link>
             </li>
           );
