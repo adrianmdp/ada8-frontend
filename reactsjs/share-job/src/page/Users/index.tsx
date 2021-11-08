@@ -1,19 +1,35 @@
 import { User } from "../../components/common/User";
+import { WithAuth } from "../../hoc/withAuth";
 
-const Users = () => {
+const UsersPage = () => {
   return (
     <>
       Users
-      <ul>
-        <User name="Adrian" />
-        <User name="Melisa" />
-        <User name="Mati" />
-        <User name="Eze" />
-        <User name="Sabri" />
-        <User name="John" />
-      </ul>
+      <div className="row">
+        <div className="col-md-4">
+          <User name="Adrian" />
+        </div>
+        <div className="col-md-4">
+          <User name="Melisa" />
+        </div>
+
+        <div className="col-md-4">
+          <User name="Mati" />
+        </div>
+        <div className="col-md-4">
+          <User name="Eze" />
+        </div>
+
+        <div className="col-md-4">
+          <User name="Sabri" />
+        </div>
+
+        <div className="col-md-4">
+          <User name="John" />
+        </div>
+      </div>
     </>
   );
 };
 
-export { Users };
+export const Users = WithAuth(UsersPage);

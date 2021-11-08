@@ -6,6 +6,7 @@ const defaultValues = {
   email: "",
   password: "",
   birthdate: "",
+  sessionToken: "",
 };
 
 const SignUp: FC = () => {

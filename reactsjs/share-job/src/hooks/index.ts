@@ -1,1 +1,2 @@
-export {useAccount} from './useAccount'
+export { useAccount } from "./useAccount";
+export { useAuth } from "./useAuth";

@@ -4,6 +4,7 @@ export type User = {
   id: string;
   name: string;
   password: string;
+  sessionToken: string;
 };
 
 export type JobOffer = {
