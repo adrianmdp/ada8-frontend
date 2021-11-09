@@ -1,5 +1,4 @@
 import { FC, useContext } from "react";
-import { useParams } from "react-router";
 import { Card } from "..";
 import { AuthContext } from "../../../contexts";
 import { useAccount } from "../../../hooks/useAccount";

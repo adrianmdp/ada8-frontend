@@ -2,8 +2,10 @@ import { FC, useEffect, useState } from "react";
 import { JobOffer } from "../../types";
 import { getJobOffers } from "./api";
 import { Card } from "../../components/common";
+import { WithAuth } from "../../hoc";
+import { Link } from "react-router-dom";
 
-const JobOffers: FC = () => {
+const JobOffersPage: FC = () => {
   const [offers, setOffers] = useState<JobOffer[]>();
 
   useEffect(() => {
@@ -20,9 +22,11 @@ const JobOffers: FC = () => {
         {offers?.map((offer) => (
           <Card title={offer.title}>{offer.description}</Card>
         ))}
+
+        <Link to="/login">Ir a Login</Link>
       </div>
     </>
   );
 };
 
-export { JobOffers };
+export const JobOffers = WithAuth(JobOffersPage);

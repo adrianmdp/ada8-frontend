@@ -1,5 +1,8 @@
-import { FC } from "react";
+import { FC, useContext, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import { AuthContext } from "../../contexts";
 import { useAuth } from "../../hooks/useAuth";
+import { Login } from "../../page";
 
 // Verficar si existe una sesión activa y en caso de no existir
 // carga la pagina de Login.
@@ -7,17 +10,25 @@ import { useAuth } from "../../hooks/useAuth";
 // actual o, si vengo de login o signup, tengo que enviar a
 // la pagina principal.
 
-const isAuthenticated = true;
+const publicRoutes = ["/login", "/sign-up"];
 
 type withAuthenticationFn = (Component: FC) => FC;
 
 const WithAuth: withAuthenticationFn = (Component) => {
   const Authenticated: FC = (): JSX.Element | null => {
-    const { login } = useAuth();
+    const { push, location } = useHistory();
 
-    // login("asd", "asd");
+    const { hasUserLoggedIn } = useAuth();
 
-    return isAuthenticated ? <Component /> : null;
+    console.log(hasUserLoggedIn);
+
+    useEffect(() => {
+      if (hasUserLoggedIn !== undefined) {
+        if (hasUserLoggedIn === false) push("/login");
+      }
+    }, [hasUserLoggedIn]);
+
+    return publicRoutes.includes(location.pathname) ? <Login /> : <Component />;
   };
 
   return Authenticated;

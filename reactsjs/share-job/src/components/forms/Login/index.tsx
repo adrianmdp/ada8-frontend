@@ -26,7 +26,7 @@ const Login: FC<Props> = ({ id, className }) => {
     e.preventDefault();
 
     try {
-      const response = await login(inputs.email, inputs.password);
+      await login(inputs.email, inputs.password);
 
       push("/");
     } catch (e) {
