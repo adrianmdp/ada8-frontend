@@ -1,5 +1,6 @@
 import { FC, useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { Loading } from "../../components/common";
 import { AuthContext } from "../../contexts";
 import { useAuth } from "../../hooks/useAuth";
 import { Login } from "../../page";
@@ -22,13 +23,14 @@ const WithAuth: withAuthenticationFn = (Component) => {
 
     console.log(hasUserLoggedIn);
 
-    useEffect(() => {
-      if (hasUserLoggedIn !== undefined) {
-        if (hasUserLoggedIn === false) push("/login");
-      }
-    }, [hasUserLoggedIn]);
+    if (hasUserLoggedIn === undefined) return <Loading />;
 
-    return publicRoutes.includes(location.pathname) ? <Login /> : <Component />;
+    if (hasUserLoggedIn && publicRoutes.includes(location.pathname)) push("/");
+
+    if (hasUserLoggedIn === false && !publicRoutes.includes(location.pathname))
+      push("/login");
+
+    return <Component />;
   };
 
   return Authenticated;

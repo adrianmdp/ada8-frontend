@@ -4,9 +4,12 @@ import { getJobOffers } from "./api";
 import { Card } from "../../components/common";
 import { WithAuth } from "../../hoc";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks";
 
 const JobOffersPage: FC = () => {
   const [offers, setOffers] = useState<JobOffer[]>();
+
+  const { logout } = useAuth();
 
   useEffect(() => {
     getJobOffers().then((response) => {
@@ -16,6 +19,7 @@ const JobOffersPage: FC = () => {
 
   return (
     <>
+      <button onClick={logout}>Cerrar sesión</button>
       <h1 className="title">Ofertas de trabajo</h1>
 
       <div className="cards-wrapper">

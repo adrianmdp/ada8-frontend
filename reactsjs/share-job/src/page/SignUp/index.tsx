@@ -1,8 +1,9 @@
 import { FC } from "react";
 import { SignUp as SignUpForm } from "../../components/forms";
+import { WithAuth } from "../../hoc";
 
-const SignUp: FC = () => {
+const SignUpPage: FC = () => {
   return <SignUpForm />;
 };
 
-export { SignUp };
+export const SignUp = WithAuth(SignUpPage);

@@ -12,6 +12,7 @@ import {
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { AuthProvider } from "./contexts";
+import { useAuth } from "./hooks";
 
 const App = () => {
   return (

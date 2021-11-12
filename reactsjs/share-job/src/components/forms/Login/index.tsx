@@ -27,8 +27,6 @@ const Login: FC<Props> = ({ id, className }) => {
 
     try {
       await login(inputs.email, inputs.password);
-
-      push("/");
     } catch (e) {
       // setAlert(e.message);
     }

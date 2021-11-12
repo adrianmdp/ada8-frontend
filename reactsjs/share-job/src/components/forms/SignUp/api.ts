@@ -6,9 +6,8 @@ type Payload = Omit<User, "id" /* | 'name' | 'passeord' */>;
 const signup = async (payload: Payload) => {
   try {
     const response = await api.post("/users.json", payload);
-    console.log(response);
   } catch (e) {
-    console.log(e);
+    // console.log(e);
   }
 };
 

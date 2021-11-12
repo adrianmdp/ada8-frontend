@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { AuthContext } from "../../contexts";
 import { mapToArray } from "../../helpers";
 import { User } from "../../types";
@@ -10,6 +11,8 @@ const useAuth = () => {
   );
 
   const [hasUserLoggedIn, setHasUserLoggedIn] = useState<boolean>();
+
+  const { push } = useHistory();
 
   const { setCurrentUser } = useContext(AuthContext);
 
@@ -59,8 +62,9 @@ const useAuth = () => {
 
         if (token) {
           setTokenStorage(token);
-          setCurrentUser(user);
-          setHasUserLoggedIn(true);
+          push("/");
+          // setCurrentUser(user);
+          // setHasUserLoggedIn(true);
         } else {
           setHasUserLoggedIn(false);
         }
@@ -69,7 +73,7 @@ const useAuth = () => {
       }
       /* / Tarea de backend */
     } catch (e) {
-      console.log(e);
+      // console.log(e);
     }
   };
 
@@ -85,20 +89,21 @@ const useAuth = () => {
         user = users.find((user) => user.sessionToken === tokenStorage);
       }
 
-      console.log(user);
-
       if (user) {
-        setCurrentUser(user);
+        // setCurrentUser(user);
         setHasUserLoggedIn(true);
       } else {
         setHasUserLoggedIn(false);
       }
     } catch (e) {
-      console.log(e);
+      // console.log(e);
     }
   };
 
-  const logout = () => {};
+  const logout = () => {
+    localStorage.removeItem("share-job-token");
+    push("/login");
+  };
 
   const signUp = () => {};
 
