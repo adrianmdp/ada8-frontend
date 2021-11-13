@@ -1,7 +1,8 @@
 import { FC } from "react";
+import { WithAuth } from "../../hoc";
 
-const Categories: FC = () => {
+const CategoriesPage: FC = () => {
   return <>Categories</>;
 };
 
-export { Categories };
+export const Categories = WithAuth(CategoriesPage);

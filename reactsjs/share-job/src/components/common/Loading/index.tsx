@@ -2,7 +2,7 @@ import { useState } from "react";
 import RingLoader from "react-spinners/RingLoader";
 
 const Loading = () => {
-  const [loading, setLoading] = useState();
+  const [loading] = useState();
 
   return (
     <div
@@ -17,7 +17,7 @@ const Loading = () => {
         justifyContent: "center",
       }}
     >
-      <RingLoader color="#CCC" loading={loading} size={20} />
+      <RingLoader color="#555" loading={loading} size={20} />
     </div>
   );
 };

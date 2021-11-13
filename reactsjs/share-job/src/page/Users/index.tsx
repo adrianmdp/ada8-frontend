@@ -1,34 +1,32 @@
+import { useState } from "react";
+import { getUsers } from "../../api";
 import { User } from "../../components/common/User";
-import { Login } from "../../components/forms";
 import { WithAuth } from "../../hoc/withAuth";
+import { User as UserType } from "../../types";
 
 const UsersPage = () => {
+  const [users, setUsers] = useState<UserType[] | undefined>();
+
+  const obtenerUsuarios = async () => {
+    const response = await getUsers();
+    setUsers(response);
+  };
+
+  if (!users) {
+    obtenerUsuarios();
+  }
   return (
     <>
-      Users
       <div className="row">
-        <div className="col-md-4">
-          <User name="Adrian" />
-        </div>
-        <div className="col-md-4">
-          <User name="Melisa" />
-        </div>
-
-        <div className="col-md-4">
-          <User name="Mati" />
-        </div>
-        <div className="col-md-4">
-          <User name="Eze" />
-        </div>
-
-        <div className="col-md-4">
-          <User name="Sabri" />
-        </div>
-
-        <div className="col-md-4">
-          <User name="John" />
-        </div>
+        {users?.map((user) => {
+          return (
+            <div className="col-md-4">
+              <User user={user} />
+            </div>
+          );
+        })}
       </div>
+      Users
     </>
   );
 };

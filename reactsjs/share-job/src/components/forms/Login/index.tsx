@@ -1,5 +1,4 @@
 import { FC, FormEvent, useState } from "react";
-import { useHistory } from "react-router-dom";
 import { useAuth } from "../../../hooks";
 
 const defaultValues = {
@@ -19,7 +18,6 @@ const Login: FC<Props> = ({ id, className }) => {
   const [inputs, setInputs] = useState(defaultValues);
   const [alert] = useState<string | unknown>();
 
-  const { push } = useHistory();
   const { login } = useAuth();
 
   const handleSubmit = async (e: FormEvent<HTMLElement>) => {

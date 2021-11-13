@@ -22,6 +22,7 @@ const useAuth = () => {
 
   useEffect(() => {
     loginWithToken();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   /**
@@ -63,7 +64,7 @@ const useAuth = () => {
         if (token) {
           setTokenStorage(token);
           push("/");
-          // setCurrentUser(user);
+          setCurrentUser(user);
           // setHasUserLoggedIn(true);
         } else {
           setHasUserLoggedIn(false);
@@ -90,7 +91,7 @@ const useAuth = () => {
       }
 
       if (user) {
-        // setCurrentUser(user);
+        setCurrentUser(user);
         setHasUserLoggedIn(true);
       } else {
         setHasUserLoggedIn(false);
@@ -102,6 +103,7 @@ const useAuth = () => {
 
   const logout = () => {
     localStorage.removeItem("share-job-token");
+    setCurrentUser(undefined);
     push("/login");
   };
 

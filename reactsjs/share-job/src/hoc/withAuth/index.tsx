@@ -1,9 +1,7 @@
-import { FC, useContext, useEffect } from "react";
+import { FC } from "react";
 import { useHistory } from "react-router-dom";
 import { Loading } from "../../components/common";
-import { AuthContext } from "../../contexts";
 import { useAuth } from "../../hooks/useAuth";
-import { Login } from "../../page";
 
 // Verficar si existe una sesión activa y en caso de no existir
 // carga la pagina de Login.

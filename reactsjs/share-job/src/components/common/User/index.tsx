@@ -1,45 +1,26 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
+import { Link, useHistory } from "react-router-dom";
 import { Card } from "..";
-import { AuthContext } from "../../../contexts";
-import { useAccount } from "../../../hooks/useAccount";
+import { User as UserType } from "../../../types";
 
 type Props = {
-  name: string;
+  user: UserType;
 };
 
-const User: FC<Props> = ({ name }) => {
-  // const { id } = useParams()
-
-  const { agregarVale, descontarVale, obtenerSueldo } = useAccount();
-
-  const { currentUser, setCurrentUser } = useContext(AuthContext);
+const User: FC<Props> = ({ user }) => {
+  const { push } = useHistory();
 
   return (
-    <Card title="Tíulo de la card">
+    <Card title={user.name}>
       <div className="card-body">
-        Admin = {currentUser?.name}
-        <br />
-        Sueldo = {obtenerSueldo()}
+        <ul>
+          <li>{user.email}</li>
+        </ul>
+
+        <button onClick={() => push(`/users/${user.id}`)}>Ver usuario</button>
+
+        <Link to={`/users/${user.id}`}>Ver usuario</Link>
       </div>
-
-      <button onClick={() => agregarVale(100)}>Agregar vale</button>
-
-      <button onClick={() => descontarVale(100)}>Descontar vale</button>
-
-      <button
-        onClick={() =>
-          setCurrentUser({
-            name,
-            birthdate: new Date("13-04-1983"),
-            email: "asd@asd.com",
-            password: "asd",
-            id: "123",
-          })
-        }
-      >
-        Definir admin
-      </button>
-      <hr />
     </Card>
   );
 };
