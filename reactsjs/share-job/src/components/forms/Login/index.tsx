@@ -1,10 +1,9 @@
 import { FC, FormEvent, useState } from "react";
 import { useAuth } from "../../../hooks";
-
-const defaultValues = {
-  email: "",
-  password: "",
-};
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { validationSchema } from "./validation-schema";
+import { defaultValues } from "./default-values";
 
 type Props = {
   id?: string;
@@ -20,33 +19,49 @@ const Login: FC<Props> = ({ id, className }) => {
 
   const { login } = useAuth();
 
-  const handleSubmit = async (e: FormEvent<HTMLElement>) => {
-    e.preventDefault();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm<{ email: string; password: string }>({
+    resolver: yupResolver(validationSchema),
+    defaultValues,
+  });
 
+  const onSubmit = async (data: { email: string; password: string }) => {
     try {
-      await login(inputs.email, inputs.password);
+      await login(data.email, data.password);
     } catch (e) {
       // setAlert(e.message);
     }
   };
 
   return (
-    <form id={id} className={className} action="" onSubmit={handleSubmit}>
+    <form
+      id={id}
+      className={className}
+      action=""
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div>
         <label htmlFor="">Email</label>
         <input
-          type="email"
-          value={inputs.email}
-          onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
+          type="text"
+          // value={inputs.email}
+          // onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
+          {...register("email")}
         />
+        {errors.email?.message}
       </div>
       <div>
         <label htmlFor="">Contraseña</label>
         <input
           type="password"
-          value={inputs.password}
-          onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
+          // value={inputs.password}
+          // onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
+          {...register("password")}
         />
+        {errors.password?.message}
       </div>
 
       <button type="submit">Iniciar sesión</button>
