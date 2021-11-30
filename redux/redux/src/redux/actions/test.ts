@@ -1,9 +1,9 @@
 import { api } from "../../utils/axios";
 import { types } from "../types";
 
-export const precessTest = () => {
-  console.log("funciona");
+export const processTest = () => {
   return async (dispatch) => {
+
     dispatch(iniciarPrueba());
 
     try {
@@ -19,6 +19,7 @@ const iniciarPrueba = () => ({
   type: types.testInit,
   payload: [],
 });
+
 
 const pruebaExitosa = (data) => ({
   type: types.testOk,

@@ -5,11 +5,13 @@ const initialState = {
   loading: false,
 };
 
+
+
 export const testReducer = (state = initialState, action: any) => {
   switch (action.type) {
     case types.testInit:
       return {
-        ...state,
+        data: action.payload,
         loading: true,
       };
     case types.testOk:
