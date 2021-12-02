@@ -20,7 +20,7 @@ const AddUsers: FC = () => {
 
   useEffect(() => {
     getUsers();
-  }, []);
+  }, [getUsers]);
 
   return (
     <form action="" onSubmit={handleSubmit(onSubmit)}>

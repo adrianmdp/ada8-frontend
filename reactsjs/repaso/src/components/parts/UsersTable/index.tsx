@@ -8,7 +8,7 @@ const UsersTable: FC = () => {
 
   useEffect(() => {
     getUsers();
-  }, []);
+  }, [getUsers]);
 
   return (
     <table>
