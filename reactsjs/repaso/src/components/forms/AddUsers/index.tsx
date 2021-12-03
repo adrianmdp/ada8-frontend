@@ -7,20 +7,16 @@ import { useUsers } from "../../../hooks";
 import { AddUserType } from "../../../types/models";
 
 const AddUsers: FC = () => {
-  const { addUser, getUsers } = useUsers();
+  const { addUser } = useUsers();
 
   const { handleSubmit, register, formState } = useForm({
     defaultValues,
     resolver: yupResolver(validationSchema),
   });
 
-  const onSubmit = (data: AddUserType) => {
-    addUser(data);
+  const onSubmit = async (data: AddUserType) => {
+    await addUser(data);
   };
-
-  useEffect(() => {
-    getUsers();
-  }, [getUsers]);
 
   return (
     <form action="" onSubmit={handleSubmit(onSubmit)}>

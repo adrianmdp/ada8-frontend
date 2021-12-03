@@ -1,24 +1,29 @@
 import { useContext } from "react";
+import { useMutation, useQuery, useQueryClient } from "react-query";
 import { usersApi } from "../../api";
+import { QUERY_KEYS } from "../../constants";
 import { UsersContext } from "../../contexts";
-import { AddUserType } from "../../types/models";
 
 const useUsers = () => {
-  const { updateUsers } = useContext(UsersContext);
+  const queryClient = useQueryClient();
 
-  const addUser = async (datos: AddUserType) => {
-    await usersApi.addUser(datos);
-    getUsers();
-  };
+  const { updateUsers, users } = useContext(UsersContext);
 
-  const getUsers = async () => {
-    const response = await usersApi.getUsers();
-    updateUsers(response);
-  };
+  const { isLoading } = useQuery(QUERY_KEYS.USERS, usersApi.getUsers, {
+    onSuccess: (data) => {
+      updateUsers(data);
+    },
+  });
+
+  const { mutateAsync: addUser } = useMutation(usersApi.addUser, {
+    onSuccess: () => {
+      queryClient.invalidateQueries(QUERY_KEYS.USERS);
+    },
+  });
 
   const getUser = (id: string) => {};
 
-  return { addUser, getUsers, getUser };
+  return { getUser, addUser, users, isLoading };
 };
 
 export { useUsers };
