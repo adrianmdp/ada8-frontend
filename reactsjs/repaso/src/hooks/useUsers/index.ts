@@ -21,9 +21,15 @@ const useUsers = () => {
     },
   });
 
+  // const { mutateAsync: removeUser } = useMutation(usersApi.removeUser, {
+  //   onSuccess: () => {
+  //     queryClient.invalidateQueries(QUERY_KEYS.USERS);
+  //   },
+  // });
+
   const getUser = (id: string) => {};
 
-  return { getUser, addUser, users, isLoading };
+  return { getUser, addUser, /* remove, */ users, isLoading };
 };
 
 export { useUsers };
