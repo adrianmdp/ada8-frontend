@@ -1,24 +1,33 @@
-import { useContext } from "react";
-import { usersApi } from "../../api";
+import { useContext, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { UsersContext } from "../../contexts";
-import { AddUserType } from "../../types/models";
+import { getUsersAction } from "../../redux/actions";
+import { addUserAction } from "../../redux/actions";
+import { AddUserType, Store, Task, User } from "../../types";
 
 const useUsers = () => {
   const { updateUsers } = useContext(UsersContext);
 
+  const dispatch = useDispatch();
+
+  const users = useSelector((state: Store<User>) => state.users);
+
+  useEffect(() => {
+    dispatch(getUsersAction());
+  }, []);
+
   const addUser = async (datos: AddUserType) => {
-    await usersApi.addUser(datos);
+    await dispatch(addUserAction(datos));
     getUsers();
   };
 
   const getUsers = async () => {
-    const response = await usersApi.getUsers();
-    updateUsers(response);
+    dispatch(getUsersAction());
   };
 
   const getUser = (id: string) => {};
 
-  return { addUser, getUsers, getUser };
+  return { users, addUser, getUsers, getUser };
 };
 
 export { useUsers };

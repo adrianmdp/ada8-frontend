@@ -1,14 +1,9 @@
-import { FC, useContext, useEffect } from "react";
-import { UsersContext } from "../../../contexts";
+import { FC } from "react";
 import { useUsers } from "../../../hooks";
+import { Store, User } from "../../../types";
 
 const UsersTable: FC = () => {
-  const { getUsers } = useUsers();
-  const { users } = useContext(UsersContext);
-
-  useEffect(() => {
-    getUsers();
-  }, [getUsers]);
+  const { users } = useUsers();
 
   return (
     <table>
@@ -19,7 +14,7 @@ const UsersTable: FC = () => {
         <th>Nombre</th>
       </thead>
       <tbody>
-        {users?.map((user) => (
+        {users?.items?.map((user: User) => (
           <tr>
             <td>{user.id}</td>
             <td>{user.email}</td>
@@ -27,6 +22,11 @@ const UsersTable: FC = () => {
             <td>{user.name}</td>
           </tr>
         ))}
+        {users.loading && (
+          <tr>
+            <td colSpan={4}>Cargando usuario</td>
+          </tr>
+        )}
       </tbody>
     </table>
   );

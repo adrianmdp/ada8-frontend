@@ -15,3 +15,11 @@ export type Task = {
 };
 
 export type AddTaskType = Omit<Task, "id">;
+
+export type Store<T> = {
+  [name: string]: {
+    loading?: boolean;
+    items?: T[];
+    error?: string;
+  };
+};

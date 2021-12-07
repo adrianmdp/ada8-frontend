@@ -7,7 +7,7 @@ import { useUsers } from "../../../hooks";
 import { AddUserType } from "../../../types/models";
 
 const AddUsers: FC = () => {
-  const { addUser, getUsers } = useUsers();
+  const { addUser } = useUsers();
 
   const { handleSubmit, register, formState } = useForm({
     defaultValues,
@@ -17,10 +17,6 @@ const AddUsers: FC = () => {
   const onSubmit = (data: AddUserType) => {
     addUser(data);
   };
-
-  useEffect(() => {
-    getUsers();
-  }, [getUsers]);
 
   return (
     <form action="" onSubmit={handleSubmit(onSubmit)}>
